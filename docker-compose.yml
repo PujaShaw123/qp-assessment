@@ -1,0 +1,29 @@
+version: "3"
+services:
+  # Step 2: PostgreSQL Container
+  postgres_container_2:
+    image: postgres
+    container_name: postgres_container_2
+    environment:
+      POSTGRES_PASSWORD: passw0rd
+    ports:
+      - "5432:5432"
+    networks:
+      - grocery_network_2
+
+  # Step 1 and Step 3: FastAPI Application Container
+  grocery_app_container_2:
+    build: .
+    image: grocery_app_assignment:2.0.0
+    container_name: grocery_app_container_2
+    ports:
+      - "8000:8000"
+    networks:
+      - grocery_network_2
+    depends_on:
+      - postgres_container_2
+
+networks:
+  grocery_network_2:
+# Define a custom network to enable communication between containers.
+# Use the "docker network connect" command to add containers to this network.

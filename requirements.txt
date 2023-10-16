@@ -1,0 +1,9 @@
+aiohttp==3.8.0
+cryptography==3.4.7
+fastapi==0.68.1
+python-multipart==0.0.5
+SQLAlchemy==1.4.19
+uvicorn[standard]==0.15.0
+starlette_exporter
+uuid
+psycopg2-binary
