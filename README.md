@@ -18,13 +18,13 @@
 - git clone `https://github.com/PujaShaw123/qp-assessment.git`
 
 - Build the Docker image from the Dockerfile 
-    docker-compose build
+    - docker-compose build
 
 - Start the containers
-    docker-compose up -d
+    - docker-compose up -d
 
 - Create the "grocery_app" schema in the PostgreSQL container
-    docker exec -it postgres_container_2 psql -U postgres -c "CREATE SCHEMA grocery_app;"
+    - docker exec -it postgres_container_2 psql -U postgres -c "CREATE SCHEMA grocery_app;"
 
 - Restart the FastAPI container
-    docker-compose restart grocery_app_container_2
+    - docker-compose restart grocery_app_container_2
